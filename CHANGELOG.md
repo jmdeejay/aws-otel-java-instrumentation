@@ -13,6 +13,14 @@ If your change does not need a CHANGELOG entry, add the "skip changelog" label t
 
 ## Unreleased
 
+## v2.26.2
+
+- Bump `com.amazonaws:aws-java-sdk-bom` 1.12.599 -> 1.12.797 (patch-level CVE updates;
+  also satisfies the precondition for the Netty 4.1.132 pin noted in `dependencyManagement`).
+- Bump `com.fasterxml.jackson:jackson-bom` 2.21.1 -> 2.21.2 (patch-level CVE updates).
+
+## v2.26.1 (upstream baseline used for v2.26.2)
+
 - Support environment-configured endpoint visibility for HTTP operation names
   ([#1352](https://github.com/aws-observability/aws-otel-java-instrumentation/pull/1352))
 - Bump Netty to 4.1.132.Final to fix CVE-2026-33870 and CVE-2026-33871
