@@ -13,6 +13,18 @@ If your change does not need a CHANGELOG entry, add the "skip changelog" label t
 
 ## Unreleased
 
+## v2.26.3 (jmdeejay fork, conservative CVE-patch rebuild)
+
+- Bump `com.amazonaws:aws-java-sdk-bom` 1.12.599 -> 1.12.797 (patch-level CVE updates).
+- Bump `com.fasterxml.jackson:jackson-bom` 2.21.1 -> 2.21.3 (patch-level CVE updates).
+- Inherits upstream Netty bump to 4.1.133.Final (CVE-2026-41417 fix).
+- Includes upstream `Support environment-configured endpoint visibility for HTTP
+  operation names` (#1352).
+- Built against upstream `main` at commit 6e7ab4a (post-v2.26.2 SNAPSHOT cycle),
+  with `-Prelease.version=2.26.3`.
+
+## Unreleased (upstream entries kept as a record)
+
 - Bump Netty to 4.1.133.Final to fix CVE-2026-41417
   ([#1374](https://github.com/aws-observability/aws-otel-java-instrumentation/pull/1374))
 - Support environment-configured endpoint visibility for HTTP operation names
