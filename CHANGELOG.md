@@ -13,6 +13,19 @@ If your change does not need a CHANGELOG entry, add the "skip changelog" label t
 
 ## Unreleased
 
+## v2.28.2 (jmdeejay fork, conservative CVE-patch rebuild)
+
+- Bump `com.amazonaws:aws-java-sdk-bom` 1.12.599 -> 1.12.797 (patch-level CVE updates).
+- Bump `com.fasterxml.jackson:jackson-bom` 2.21.1 -> 2.21.4 (patch-level CVE updates).
+- Inherits all upstream changes since `v2.28.1`, including:
+  - Bump Netty to 4.1.135.Final to fix CVE-2026-45416 and CVE-2026-44249 (#1389).
+  - Add Dynamic Instrumentation (Preview, opt-in, off by default) (#1384).
+  - Add ServiceEvents instrumentation (#1386).
+- Built against upstream `main` at commit 03fcb31 (post-v2.28.1 SNAPSHOT cycle),
+  with `-Prelease.version=2.28.2`.
+
+## Upstream entries kept as a record
+
 - Add Dynamic Instrumentation (Preview): capture additional runtime telemetry from a running
   application without a restart or redeploy. Opt-in and disabled by default via
   `OTEL_AWS_DYNAMIC_INSTRUMENTATION_ENABLED`. See `docs/dynamic-instrumentation.md`.
