@@ -13,6 +13,21 @@ If your change does not need a CHANGELOG entry, add the "skip changelog" label t
 
 ## Unreleased
 
+## v2.28.3 (jmdeejay fork, conservative CVE-patch rebuild)
+
+- Bump `com.amazonaws:aws-java-sdk-bom` 1.12.599 -> 1.12.797 (patch-level CVE updates).
+- Inherits `opentelemetry-api` bump from 1.51.x -> 1.63.0 via the upstream OTel
+  Instrumentation 2.28.1 -> 2.29.0 bump (upstream PR #1400), which resolves the
+  known CVE affecting `opentelemetry-api` versions prior to 1.62.0.
+- Inherits `jackson-bom` -> 2.21.4 (upstream PR #1412; this fork previously carried
+  the same bump manually in `v2.28.2`).
+- Inherits removal of EOL AWS SDK v1 dependency for ARN parsing (upstream PR #1401).
+- Includes upstream DI/ServiceEvents fixes since `v2.28.2` (Java 8 startup fix,
+  Java 25 ASM fix, overloaded-method capture, sampling defaults, etc.).
+- Built against upstream `main` at commit 868630b, with `-Prelease.version=2.28.3`.
+
+## Upstream entries kept as a record
+
 - fix: remove EOL AWS SDK v1 dependency for ARN parsing
   ([#1401](https://github.com/aws-observability/aws-otel-java-instrumentation/pull/1401))
 
